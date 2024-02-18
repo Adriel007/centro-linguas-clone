@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "Node.js Rest Apis with Express, Sequelize & PostgreSQL",
   "main": "server.js",
-  "scripts": {},
+  "scripts": {
+    "dev": "supervisor server.js"
+  },
   "keywords": [
     "nodejs",
     "express",
@@ -22,6 +24,7 @@
     "sequelize": "^6.36.0"
   },
   "devDependencies": {
-    "sequelize-cli": "^6.6.2"
+    "sequelize-cli": "^6.6.2",
+    "supervisor": "^0.12.0"
   }
 }
