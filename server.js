@@ -34,6 +34,7 @@ app.get("/", (req, res) => {
 require("./app/routes/aluno.routes")(app);
 require("./app/routes/notas.routes")(app);
 require("./app/routes/evento.routes")(app);
+require("./app/routes/presenca.routes")(app);
 
 // set port, listen for requests
 const PORT = process.env.PORT || 3333;
