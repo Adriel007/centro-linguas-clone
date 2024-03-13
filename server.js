@@ -11,7 +11,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 require("./app/routes/example.routes")(app);
-require("./app/routes/horario-aulas.routes")(app);
+require("./app/routes/horarios.routes")(app);
 
 const PORT = process.env.PORT || 8080;
 app.listen(PORT, () => {
