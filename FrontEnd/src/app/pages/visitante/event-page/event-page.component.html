@@ -1,0 +1,56 @@
+<div class="container-principal">
+    <h2>Evento</h2>
+    <hr>
+    <div class="container-geral">
+        <div class="container-esquerdo">
+            <h2 class="nome-evento">{{ eventos.titulo }}</h2>
+            <div class="data-hora">
+                <p>Data: {{ eventos.data }}</p>
+                <p>Local: {{ eventos.local }}</p>
+            </div>
+
+            <div class="sobre-evento">
+                <h3>Sobre o Evento</h3>
+                <p>{{ eventos.descricao }}</p>
+            </div>
+
+            <div class="registro-evento">
+                <h3>Registro</h3>
+                <p>{{ eventos.registro }}</p>
+            </div>
+        </div>
+        <div class="container-direito">
+            <div class="palestrante-evento">
+                <h3>Palestrantes</h3>
+                <div class="speaker">
+                    <img src="../../../../assets/profile-default.png" alt="{{ eventos.palestrantes.nome }}">
+                    <div>
+                        <h3>{{ eventos.palestrantes.nome }}</h3>
+                        <p>{{ eventos.palestrantes.descricao }}</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contato-evento">
+                <h3>Contato</h3>
+                <p>{{ eventos.contato }}</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="agenda-evento">
+        <h3>Agenda</h3>
+        <table>
+            <tr>
+                <th>Horário</th>
+                <th>Atividade</th>
+            </tr>
+            <tr>
+                <td>{{ eventos.agenda.horario }}</td>
+                <td>{{ eventos.agenda.atividade }}</td>
+            </tr>
+        </table>
+    </div>
+
+
+</div>

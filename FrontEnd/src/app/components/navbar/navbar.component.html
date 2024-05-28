@@ -1,0 +1,29 @@
+<div class="container-principal">
+    <div class="navbar-logo">
+        <img src="../../../assets/logotipo.png" alt="Logo">
+        <h3>Centro de Línguas</h3>
+    </div>
+    <div class="navbar-login" *ngIf="navbarService.getLoggedIn()">
+        <a routerLink="/home">Home</a>
+        <a routerLink="/institucional">Institucional</a>
+        <a routerLink="/cursos-disponiveis">Cursos Disponiveis</a>
+        <div class="navbar-perfil" (click)="toggleMenu()">
+            <img src="../../../assets/user-icon.svg" alt="icone de usuario" height="35px" width="35px">
+            <!-- <a>Perfil</a> -->
+            <div class="profile-menu" [ngClass]="{'clicked': isMenuOpen}">
+                <ul>
+                    <li routerLink="/perfil">Perfil</li>
+                    <li routerLink="/meus-cursos">Meus Cursos</li>
+                    <li routerLink="#">Histórico</li>
+                    <li routerLink="/" (click)="logout()">Sair</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="navbar-login" *ngIf="!navbarService.getLoggedIn()">
+        <a routerLink="/">Página Inicial</a>
+        <a routerLink="/institucional">Institucional</a>
+        <a routerLink="/cursos-disponiveis">Cursos Disponiveis</a>
+        <a routerLink="/login">Login</a>
+    </div>
+</div>

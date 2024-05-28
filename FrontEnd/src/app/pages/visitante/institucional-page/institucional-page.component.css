@@ -1,0 +1,51 @@
+.container {
+  margin: 1rem 3rem;
+}
+
+hr {
+  border: none;
+  height: 1px;
+  background-color: #FE0000;
+}
+
+.descricao {
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+}
+
+.descricao p {
+  margin: 1rem;
+  font-size: 18px;
+  max-height: 50vh;
+  overflow: auto;
+  width: 50vw;
+}
+
+.descricao img {
+  max-width: 40vw;
+  height: auto;
+  border-radius: 8px;
+}
+
+.professores {
+  display: flex;
+  justify-content: center;
+  overflow-x: auto;
+}
+
+.professor {
+  margin: 20px;
+}
+
+.professor img {
+  width: 150px;
+  height: 150px;
+  border-radius: 1rem;
+  object-fit: cover;
+}
+
+.professor p {
+  margin-top: 10px;
+  font-weight: bold;
+}

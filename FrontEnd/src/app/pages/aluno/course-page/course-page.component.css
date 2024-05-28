@@ -1,0 +1,88 @@
+.container-principal {
+  margin: 1rem 3rem;
+}
+
+.container-geral{
+  display: flex;
+  margin: 1rem auto;
+  gap: 1rem;
+}
+
+p{
+  font-size: 18px;
+  margin: 2px;
+}
+
+.container-esquerdo {
+  width: 20%;
+  /* Ocupa 1/5 da largura da tela */
+}
+
+.container-direito {
+  flex: 1;
+  /* Ocupa o restante da largura da tela */
+}
+
+.navigation {
+  list-style-type: none;
+  padding: 10px;
+  background-color: darkred;
+  border-radius: 1rem;
+}
+
+.navigation li {
+  cursor: pointer;
+  padding: 0.5rem;
+  color: #f0f0f0;
+  border-radius: 4px;
+  margin-bottom: 0.5rem;
+}
+
+.navigation li:hover {
+  background-color: #e0e0e0;
+  color: #333;
+}
+
+
+
+/* NOTAS e FALTAS */
+
+.notas table,
+.faltas table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: auto;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Adiciona sombra */
+  border-radius: 8px;
+  overflow: hidden;
+  border-left: none;
+
+}
+
+.notas th,
+.faltas th,
+.notas td,
+.faltas td {
+  width: 100px;
+  padding: 16px;
+  text-align: center;
+  border: #333 3px inherit;
+
+}
+
+
+.notas th,
+.faltas th {
+  background-color: darkred;
+  color: #f0f0f0;
+}
+
+.notas h3,
+.faltas h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+td:nth-child(even) {
+  background-color: #f2f2f2;
+}

@@ -1,0 +1,40 @@
+<main class="container-principal">
+  <div class="ctn-superior">
+    <h2 class="titulo-h2">Próximos Eventos</h2>
+    <hr>
+    <div class="ctn-proximos-eventos">
+      <app-card-evento-menor *ngFor="let evento of eventos" [cardTitulo]="evento.titulo" [cardData]="evento.data"
+        [cardDescricao]="evento.descricao" [cardLink]="evento.link"></app-card-evento-menor>
+    </div>
+  </div>
+  <div class="ctn-inferior">
+    <div class="ctn-inferior-noticias">
+      <h2 class="titulo-h2">Noticias</h2>
+      <hr>
+      <div class="ctn-inferior-noticias-cards">
+        <app-card-noticia-maior></app-card-noticia-maior>
+      </div>
+    </div>
+    <div class="ctn-inferior-recados">
+      <h2 class="titulo-h2">Recados</h2>
+      <hr>
+      <div class="ctn-inferior-recados-geral">
+        <div class="ctn-inferior-recados-cl">
+          <h4 class="titulo-h4">Recados Centro de Linguas</h4>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam facilisis sapien ac lacus laoreet faucibus.
+            Integer sodales auctor tellus, a euismod mauris molestie ac. Donec mattis odio nunc, vel euismod erat luctus
+            nec. Etiam tempus viverra dolor, vel porta purus tincidunt sed. Pellentesque cursus fringilla lorem vitae
+            pretium. Etiam ut.</p>
+        </div>
+        <div class="ctn-inferior-recados-rl">
+          <h4 class="titulo-h4">Recados Fatec Rubens Lara</h4>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam facilisis sapien ac lacus laoreet faucibus.
+            Integer sodales auctor tellus, a euismod mauris molestie ac. Donec mattis odio nunc, vel euismod erat luctus
+            nec. Etiam tempus viverra dolor, vel porta purus tincidunt sed. Pellentesque cursus fringilla lorem vitae
+            pretium. Etiam ut.</p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</main>

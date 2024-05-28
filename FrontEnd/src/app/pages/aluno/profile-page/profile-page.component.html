@@ -1,0 +1,55 @@
+<div class="container-principal">
+    <h2>Meu Perfil</h2>
+    <hr>
+    <div class="container-geral">
+        <!-- CONTAINER DE NAVEGAÇÃO -->
+        <div class="container-esquerdo">
+            <!-- Navegação -->
+            <img src="../../../../assets/profile-default.png" alt="foto do usuario" width="140px" height="140px">
+            <ul class="navigation">
+                <li (click)="showContent('meusDados')">Meus Dados</li>
+                <li (click)="showContent('meusCertificados')">Meus Certificados</li>
+                <li (click)="showContent('minhaSeguranca')">Segurança</li>
+            </ul>
+        </div>
+        <div class="container-direito">
+            <div *ngIf="selectedContent === 'meusDados'">
+                <h2>Meus Dados</h2>
+                <hr>
+                <div class="meusDados">
+                    <div>
+                        <span>Nome</span>
+                        <p>{{aluno.nome}}</p>
+                    </div>
+                    <div class="div-info">
+                        <div>
+                            <span>E-mail</span>
+                            <p>{{aluno.email}}</p>
+                        </div>
+                        <div>
+                            <span>Telefone</span>
+                            <p>{{aluno.telefone}}</p>
+                        </div>
+                    </div>
+                    <div>
+                        <span>Data de Nascimento</span>
+                        <p>{{aluno.dataNascimento}}</p>
+                    </div>
+                </div>
+            </div>
+            <div *ngIf="selectedContent === 'meusCertificados'">
+                <h2>Meus Certificados</h2>
+                <hr>
+                <div class="meusCertificados">
+                </div>
+            </div>
+            <div *ngIf="selectedContent === 'minhaSeguranca'">
+                <h2>Minha Segurança</h2>
+                <hr>
+                <div class="minhaSeguranca">
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

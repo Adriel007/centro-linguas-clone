@@ -1,0 +1,38 @@
+
+.card {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 200px;
+    height: 150px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  .card h3 {
+    margin-top: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  .descricao {
+    max-height: 40px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  a {
+    box-sizing: content-box;
+    position: relative;
+    bottom: 0px;
+    font-weight: 600;
+  }
+  
+  a:hover {
+    color: red;
+  }

@@ -1,0 +1,16 @@
+.conteudo-principal {
+    background-color: var(--azul-base);
+    padding: 1.5rem;
+    margin-top: 1rem;
+}
+
+.ctn-items {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 2rem;
+}
+
+span {
+    color: #fff;
+    margin-left: 1rem;
+}

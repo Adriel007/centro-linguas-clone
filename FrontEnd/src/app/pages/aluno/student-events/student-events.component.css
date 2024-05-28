@@ -1,0 +1,9 @@
+.container-principal {
+    margin: 1rem 3rem;
+  }
+
+.ctn-geral{
+    margin: 1rem 3rem;
+    display: flex;
+    gap: 10px;
+}

@@ -1,0 +1,8 @@
+<div class="drawer">
+  <div class="drawer-header" (click)="toggleDrawer()" [ngClass]="{ 'show': isOpen }" [ngStyle]="headerStyle">
+    {{ title }}
+  </div>
+  <div class="drawer-content" [ngClass]="{ 'show': isOpen }">
+    <ng-content></ng-content>
+  </div>
+</div>
