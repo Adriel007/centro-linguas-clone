@@ -6,24 +6,10 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./card-evento-maior.component.css']
 })
 export class CardEventoMaiorComponent {
-  @Input()
-  cardSrcImg:string = ""
-
-  @Input()
-  cardAltImg:string = "Imagem modelo"
-
-  @Input()
-  cardData:string = "01-01-2024"
-  
-  @Input()
-  cardTitulo:string = "Titulo Modelo"
-  
-  @Input()
-  cardLink:string = "/evento:id"
-
-  @Input()
-  cardDescricao:string = "Descrição Modelo, Descrição Modelo, Descrição Modelo."  
-  
-  @Input()
-  Id:string = "0"
+  @Input() cardSrcImg: string | undefined;
+  @Input() cardAltImg: string | undefined;
+  @Input() cardTitulo: string | undefined;
+  @Input() cardData: string | undefined;
+  @Input() cardDescricao: string | undefined;
+  @Input() cardLink: string | undefined;
 }

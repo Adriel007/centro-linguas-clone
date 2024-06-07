@@ -1,0 +1,75 @@
+.container-principal {
+  margin: 1rem 3rem;
+}
+
+.calendars-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem; /* Espaçamento entre os dois calendários */
+}
+
+.small-calendar {
+  width: 30%; /* Ajuste conforme necessário */
+}
+
+.large-calendar {
+  width: 70%; /* Ajuste conforme necessário */
+  max-height: 700px; /* Defina a altura máxima do contêiner */
+  position: relative;
+  overflow: hidden; /* Esconde overflow no contêiner */
+}
+
+.large-calendar .fc-view-harness {
+  max-height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.large-calendar .fc-scroller {
+  overflow-y: auto; /* Permite a rolagem vertical */
+  flex-grow: 1;
+  border-top: 5px solid #ccc; /* Adiciona borda no topo do corpo do calendário */
+}
+
+.large-calendar .fc-header-toolbar {
+  border-bottom: 5px solid #ccc; /* Adiciona borda na parte inferior do cabeçalho */
+  background-color: #f0f0f0; /* Muda a cor do fundo do cabeçalho */
+  padding: 0.5rem; /* Adiciona padding ao cabeçalho */
+}
+
+.large-calendar .fc-header-toolbar .fc-button{
+  background-color: var(--vermelho-base); /* Cor de fundo dos botões */
+  color: #fff; /* Cor do texto dos botões */
+  border: none; /* Remove borda dos botões */
+  padding: 0.5rem 1rem; /* Adiciona padding aos botões */
+  border-radius: 4px; /* Adiciona bordas arredondadas aos botões */
+  margin: 0 0.25rem; /* Espaçamento entre os botões */
+}
+.large-calendar .fc-button .fc-icon{
+  color: #fff; /* Cor do texto dos botões */
+  background-color: #a00000; /* Cor de fundo dos botões ao passar o mouse */
+
+}
+
+.large-calendar .fc-header-toolbar .fc-button:hover {
+  background-color: #a00000; /* Cor de fundo dos botões ao passar o mouse */
+}
+
+.large-calendar .fc-header-toolbar .fc-button:active {
+  background-color: #800000; /* Cor de fundo dos botões ao serem clicados */
+}
+
+.large-calendar .fc .fc-button .fc-icon {
+  font-size: 1.5em;
+  vertical-align: middle;
+  color: white;
+}
+
+h2 {
+  text-align: center;
+}
+
+hr {
+  margin-bottom: 20px;
+}

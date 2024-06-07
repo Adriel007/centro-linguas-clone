@@ -1,0 +1,49 @@
+<div class="container-principal">
+    <h2>Notas e Faltas</h2>
+    <hr>
+    <div class="botoes">
+        <button (click)="setFilter('all')">Mostrar Tudo</button>
+        <button (click)="setFilter('notas')">Mostrar Apenas Notas</button>
+        <button (click)="setFilter('faltas')">Mostrar Apenas Faltas</button>
+    </div>
+
+    <div *ngIf="filter === 'all' || filter === 'notas'" class="notas">
+        <h3>Notas</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Disciplina</th>
+                    <th>Nota 1</th>
+                    <th>Nota 2</th>
+                    <th>Média</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let disciplina of notasFaltas">
+                    <td>{{ disciplina.curso }}</td>
+                    <td>{{ disciplina.nota1 }}</td>
+                    <td>{{ disciplina.nota2 }}</td>
+                    <td>{{ calcularMedia(disciplina.nota1, disciplina.nota2) }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div *ngIf="filter === 'all' || filter === 'faltas'" class="faltas">
+        <h3>Faltas</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Disciplina</th>
+                    <th>Faltas</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let disciplina of notasFaltas">
+                    <td>{{ disciplina.curso }}</td>
+                    <td>{{ disciplina.faltas }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

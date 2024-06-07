@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-event-page',
-  templateUrl: './event-page.component.html',
-  styleUrls: ['./event-page.component.css']
+  selector: 'app-event-details',
+  templateUrl: './event-details.component.html',
+  styleUrls: ['./event-details.component.css']
 })
-export class EventPageComponent {
+export class EventDetailsComponent {
   eventos = {
       titulo: 'Workshop de Desenvolvimento Web',
       data: '10 de maio de 2024',

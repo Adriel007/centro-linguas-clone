@@ -1,7 +1,7 @@
 <div class="card">
-    <img src="{{ cardSrcImg }}" alt="{{ cardAltImg }}" width="100px" height="100px">
+    <img [src]="cardSrcImg" [alt]="cardAltImg" width="100px" height="100px">
     <h3>{{ cardTitulo }}</h3>
     <p class="data">{{ cardData }}</p>
     <p class="descricao">{{cardDescricao}}</p>
-    <a routerLink="{{ cardLink }}">Mais informações</a>
+    <a [routerLink]="cardLink">Mais informações</a>
 </div>

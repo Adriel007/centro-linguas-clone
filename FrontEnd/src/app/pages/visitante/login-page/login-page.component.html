@@ -1,18 +1,19 @@
 <div class="container">
     <div class="description">
-        <h1>Bem-vindo ao nosso sistema!</h1>
-        <p>Esperamos que tenha uma ótima experiência navegando por aqui. Esse site foi projetado para você ter uma ótima
-            experiência de navegabilidade. Aproveite seus estudos!</p>
-        <img src="../../../assets/img-cl.svg" alt="Logo Centro de Línguas">
+      <h1>Bem-vindo ao nosso sistema!</h1>
+      <p>Esperamos que tenha uma ótima experiência navegando por aqui. Esse site foi projetado para você ter uma ótima experiência de navegabilidade. Aproveite seus estudos!</p>
+      <img src="../../../assets/img-cl.svg" alt="Logo Centro de Línguas">
     </div>
-    <form class="login-form" action="#" method="post">
-        <h2>Login</h2>
-        <div class="form-group">
-            <input type="text" name="email" placeholder="E-mail">
-        </div>
-        <div class="form-group">
-            <input type="password" name="password" placeholder="Senha">
-        </div>
-        <button type="submit" routerLink="/home" (click)="login()">Entrar</button>
-    </form>
-</div>
+    <form [formGroup]="loginForm" class="login-form" (ngSubmit)="login()">
+      <h2>Login</h2>
+      <div class="form-group">
+        <input type="text" formControlName="email" placeholder="E-mail">
+      </div>
+      <div class="form-group">
+        <input type="password" formControlName="password" placeholder="Senha">
+      </div>
+      <button type="submit">Entrar</button>
+      <span>email === user@example.com <br> password === password</span>
+    </form> 
+  </div>
+    

@@ -1,0 +1,46 @@
+.container-principal {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 1rem 3rem;
+}
+
+.eventos-toggle {
+    margin: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 10px;
+}
+
+.eventos-toggle button {
+    background-color: var(--vermelho-escuro-10);
+    display: flex;
+    width: 200px;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    justify-content: center;
+    color: white;
+    font-size: 1rem;
+    opacity: 0.5; /* Botão não selecionado fica meio transparente */
+}
+
+.eventos-toggle button.selected {
+    opacity: 1; /* Botão selecionado fica "aceso" */
+}
+
+.eventos-toggle button:hover {
+    background-color: #a00000;
+    opacity: 1; /* Botão com foco fica "aceso" */
+}
+
+
+.event-list {
+    display: flex;
+    gap: 3rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
