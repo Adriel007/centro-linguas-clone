@@ -1,0 +1,16 @@
+.container-principal {
+  margin: 1rem 3rem;
+}
+
+.calendars-container {
+  display: flex;
+  gap: 2rem; /* Espaçamento entre os dois calendários */
+}
+
+.small-calendar {
+  width: 30%; /* Ajuste conforme necessário */
+}
+
+.large-calendar {
+  width: 100%;
+}

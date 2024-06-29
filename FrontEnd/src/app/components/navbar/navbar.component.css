@@ -12,6 +12,10 @@
   height: 5rem;
 }
 
+.container-principal.professor {
+  background-color: var(--azul-base);
+}
+
 .navbar-logo {
   display: flex;
   align-items: center;
@@ -33,7 +37,9 @@
   text-decoration: none;
   font-size: 16px;
 }
-
+.container-principal.professor .profile-menu {
+  background-color: var(--azul-base);
+}
 .profile-menu {
   display: none;
   position: absolute;

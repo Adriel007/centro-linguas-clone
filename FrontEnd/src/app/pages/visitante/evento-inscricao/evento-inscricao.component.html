@@ -1,0 +1,61 @@
+<div class="container-principal">
+  <h2>Inscrição para a "Palestra Intercâmbio"</h2>
+  <hr>
+  <form (ngSubmit)="onSubmit()">
+    <div class="info-aluno">
+      <div class="form-group">
+        <label for="nome">Nome completo*</label>
+        <input type="text" id="nome" required>
+      </div>
+
+      <div class="form-group">
+        <label for="email">E-mail*</label>
+        <input type="email" id="email" required>
+      </div>
+
+      <div class="form-group">
+        <label for="cpf">CPF*</label>
+        <input type="number" id="cpf" required>
+      </div>
+
+      <div class="form-group">
+        <label for="matricula">Número da matrícula</label>
+        <input type="number" id="matricula">
+      </div>
+
+      <div class="form-group">
+        <label for="telefone">Telefone / WhatsApp*</label>
+        <input type="text" id="telefone" required>
+      </div>
+      <button type="submit" class="btn-submit">Enviar Inscrição</button>
+
+    </div>
+
+
+    <div class="info-extra">
+      <div class="form-group">
+        <label for="curso">Curso*</label>
+        <input type="text" id="curso" required>
+      </div>
+      <div class="form-group">
+        <label for="trabalho">Está trabalhando atualmente?</label>
+        <input type="text" id="trabalho">
+      </div>
+
+      <div class="form-group">
+        <label for="area-interesse">Qual a sua área de interesse</label>
+        <input type="text" id="area-interesse">
+      </div>
+
+      <div class="form-group">
+        <label for="motivo">Motivo da sua participação</label>
+        <textarea id="motivo"></textarea>
+      </div>
+
+      <div class="form-group">
+        <label for="acessibilidade">Requisitos de acessibilidade</label>
+        <textarea id="acessibilidade"></textarea>
+      </div>
+    </div>
+  </form>
+</div>

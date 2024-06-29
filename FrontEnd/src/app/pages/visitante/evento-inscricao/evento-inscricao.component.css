@@ -1,0 +1,54 @@
+.container-principal {
+    margin: 1rem 3rem;
+  }
+  
+  form{
+    display: flex;
+    margin: 1rem 3rem;
+    gap: 2rem;
+  }
+
+  .info-aluno, .info-extra{
+    flex:1
+  }
+
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+  }
+  
+  .form-group label {
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+  }
+  
+  .form-group input,
+  .form-group textarea {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+  }
+  
+  .form-group textarea {
+    resize: vertical;
+  }
+  
+  .btn-submit {
+    padding: 0.75rem 1rem;
+    background-color: #a4c639;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    text-align: center;
+    align-self: center;
+    margin-bottom: 20px;
+  }
+  
+  .btn-submit:hover {
+    background-color: #8fbf31;
+  }
+  

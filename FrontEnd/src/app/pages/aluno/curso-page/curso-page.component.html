@@ -1,0 +1,181 @@
+<div class="container-principal">
+  <h2>Curso</h2>
+  <hr>
+  <div class="container-geral">
+    <div class="container-esquerdo">
+      <!-- Navegação -->
+      <ul class="navigation">
+        <li (click)="goBack()">Voltar</li>
+        <li (click)="showContent('cursoGeral')">Curso Geral</li>
+        <li (click)="showContent('informacoesCurso')">Informações do Curso</li>
+        <li (click)="showContent('conteudoMinistrado')">Conteúdo Ministrado</li>
+        <li (click)="showContent('tarefas')">Tarefas</li>
+        <li (click)="showContent('notasEFaltas')">Notas e Faltas</li>
+        <li (click)="showContent('relatorioDesempenho')">Relatório de Desempenho</li>
+      </ul>
+    </div>
+    <div class="container-direito">
+      <!-- Conteúdo -->
+      <div *ngIf="selectedContent === 'cursoGeral'">
+        <h2>Inglês - Básico 2</h2>
+        <hr>
+        <!-- Título e Descrição -->
+        <div class="curso-geral">
+          <p>Bem-vinda ao módulo Básico 2 do curso de Inglês do Centro de Línguas!</p>
+        </div>
+      </div>
+      <div *ngIf="selectedContent === 'informacoesCurso'">
+        <!-- Conteúdo da opção Informações do Curso -->
+        <h2>Informações do Curso</h2>
+        <hr>
+        <div class="info-curso">
+          <p><strong>Instituição:</strong> Centro de Línguas, Fatec Baixada Santista Rubens Lara</p>
+          <p><strong>Dias e Horários:</strong> Segundas e Quartas, das 13h às 15h</p>
+          <div style="display: flex; gap: 1rem;">
+            <p><strong>Duração da Aula:</strong> 2 horas</p>
+            <p><strong>Duração do Semestre:</strong> 40 horas</p>
+          </div>
+          <p><strong>Sala:</strong> 515</p>
+          <p><strong>Professora:</strong> Cybelle Crane</p>
+          <div style="display: flex; gap: 1rem;">
+            <p><strong>Início das Aulas:</strong> 19/02/2024</p>
+            <p><strong>Término das Aulas:</strong> 19/06/2024</p>
+          </div>
+        </div>
+          <!-- Ementa -->
+        <div class="info-curso-ementa">
+          <h3>Ementa</h3>
+          <hr>
+          <ul>
+            <li>Introdução ao vocabulário e gramática básica em inglês</li>
+            <li>Expressões e diálogos simples para situações do cotidiano</li>
+            <li>Prática de compreensão oral e escrita</li>
+            <li>Construção de frases simples e estruturas gramaticais</li>
+            <li>Introdução à pronúncia e fonética básica do inglês</li>
+            <li>Exercícios de fixação e prática</li>
+          </ul>
+        </div>
+      </div>
+      <div *ngIf="selectedContent === 'conteudoMinistrado'">
+        <!-- Conteúdo da opção Conteúdo Ministrado -->
+        <h2>Conteúdo Ministrado</h2>
+        <hr>
+        <!-- Aula 1: Introdução ao Inglês Básico -->
+        <app-drawer title="Aula 1: Introdução ao Inglês Básico">
+          <ul>
+            <li>Revisão de conceitos básicos do Inglês (alfabeto, números, cumprimentos)</li>
+            <li>Vocabulário para descrever pessoas, lugares e objetos</li>
+            <li>Expressões para situações do cotidiano (compras, restaurantes, direções)</li>
+            <li>Verbos regulares e irregulares no presente</li>
+            <li>Construção de frases afirmativas, negativas e interrogativas</li>
+            <li>Introdução aos tempos verbais passado e futuro</li>
+            <li>Prática de compreensão oral através de áudios e diálogos</li>
+            <li>Exercícios de escrita para desenvolvimento da habilidade de produção de texto</li>
+          </ul>
+        </app-drawer>
+
+        <!-- Aula 2: Expressões Avançadas -->
+        <app-drawer title="Aula 2: Expressões Avançadas">
+          <ul>
+            <li>Expressões idiomáticas e gírias em inglês</li>
+            <li>Vocabulário específico para viagens e turismo</li>
+            <li>Construção de frases complexas</li>
+            <li>Uso avançado de preposições e conjunções</li>
+            <li>Discussões sobre cultura e sociedade em países de língua inglesa</li>
+            <li>Prática de pronúncia e entonação</li>
+            <li>Exercícios de role-play para simular situações do mundo real</li>
+          </ul>
+        </app-drawer>
+
+        <!-- Aula 3: Gramática Intermediária -->
+        <app-drawer title="Aula 3: Gramática Intermediária">
+          <ul>
+            <li>Uso dos tempos verbais passado e futuro em diferentes contextos</li>
+            <li>Verbos modais (can, could, may, might, must, should, etc.)</li>
+            <li>Construção de perguntas indiretas e relativas</li>
+            <li>Substantivos contáveis e incontáveis</li>
+            <li>Adjetivos e advérbios comparativos e superlativos</li>
+            <li>Uso de condicionais (zero, primeiro, segundo e terceiro condicionais)</li>
+            <li>Exercícios de gramática para reforçar os conceitos aprendidos</li>
+          </ul>
+        </app-drawer>
+
+      </div>
+      <div *ngIf="selectedContent === 'tarefas'">
+        <h2>Tarefas</h2>
+        <hr>
+        <div *ngFor="let tarefa of tarefas">
+          <app-drawer [title]="tarefa.titulo" [isOpen]="false">
+            <p>{{ tarefa.descricao }}</p>
+            <form (submit)="enviarArquivo(tarefa.id, $event)">
+              <label for="file">Envie seu arquivo:</label>
+              <input type="file" name="file" (change)="onFileChange($event)">
+              <button type="submit">Enviar</button>
+            </form>
+          </app-drawer>
+        </div>
+      </div>           
+      <div *ngIf="selectedContent === 'notasEFaltas'">
+        <!-- Conteúdo da opção Notas e Faltas -->
+        <h2>Notas e Faltas</h2>
+        <hr>
+        <div class="notas">
+          <h3>Notas</h3>
+          <!-- Tabela de notas -->
+          <table>
+            <thead>
+              <tr>
+                <th>Disciplina</th>
+                <th>Nota 1</th>
+                <th>Nota 2</th>
+                <th>Média</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- Preencher com dados dinâmicos -->
+              <tr *ngFor="let disciplina of notas">
+                <td>{{ disciplina.nome }}</td>
+                <td>{{ disciplina.nota1 }}</td>
+                <td>{{ disciplina.nota2 }}</td>
+                <td>{{ calcularMedia(disciplina.nota1, disciplina.nota2) }}</td>
+              </tr>
+              <!-- Adicionar mais linhas conforme necessário -->
+            </tbody>
+          </table>
+        </div>
+
+        <div class="faltas">
+          <h3>Faltas</h3>
+          <!-- Tabela de faltas -->
+          <table>
+            <thead>
+              <tr>
+                <th>Disciplina</th>
+                <th>Presença</th>
+                <th>Faltas</th>
+                <th>Presença (%)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- Preencher com dados dinâmicos -->
+              <tr *ngFor="let disciplina of faltas">
+                <td>{{ disciplina.nome }}</td>
+                <td>{{ disciplina.presenca }}</td>
+                <td>{{ disciplina.faltas }}</td>
+                <td>{{ calcularPresenca(disciplina.faltas, disciplina.totalAulas) }}</td>
+              </tr>
+              <!-- Adicionar mais linhas conforme necessário -->
+            </tbody>
+          </table>
+        </div>
+
+      </div>
+      <div *ngIf="selectedContent === 'relatorioDesempenho'">
+        <!-- Conteúdo da opção Relatório de Desempenho -->
+        <h2>Relatório</h2>
+        <hr>
+        <app-drawer title="Solicitar Relatório de Desempenho"></app-drawer>
+      </div>
+    </div>
+  </div>
+</div>

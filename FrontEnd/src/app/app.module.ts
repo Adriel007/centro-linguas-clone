@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { ReactiveFormsModule } from '@angular/forms'; // Importar ReactiveFormsModule
+import { FormsModule, ReactiveFormsModule } from '@angular/forms'; // Importar ReactiveFormsModule
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -16,20 +17,23 @@ import { CardNoticiaMaiorComponent } from './components/card-noticia-maior/card-
 import { CardQuadradoModeloComponent } from './components/card-quadrado-modelo/card-quadrado-modelo.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { FooterComponent } from './components/footer/footer.component';
-import { HomePageComponent } from './pages/aluno/home-page/home-page.component';
-import { StudentCoursesComponent } from './pages/aluno/student-courses/student-courses.component';
+import { HomeAlunoComponent } from './pages/aluno/home-aluno/home-aluno.component';
+import { CursosAlunoComponent } from './pages/aluno/cursos-aluno/cursos-aluno.component';
 import { LoginPageComponent } from './pages/visitante/login-page/login-page.component';
 import { InstitucionalPageComponent } from './pages/visitante/institucional-page/institucional-page.component';
-import { AvailableCoursesComponent } from './pages/visitante/available-courses/available-courses.component';
-import { CoursePageComponent } from './pages/aluno/course-page/course-page.component';
+import { CursosDisponiveisComponent } from './pages/visitante/cursos-disponiveis/cursos-disponiveis.component';
+import { CursoPageComponent } from './pages/aluno/curso-page/curso-page.component';
 import { DrawerComponent } from './components/drawer/drawer.component';
-import { NavbarService } from './components/navbar/navbar.service';
-import { ProfilePageComponent } from './pages/aluno/profile-page/profile-page.component';
-import { EventDetailsComponent } from './pages/visitante/event-details/event-details.component';
+import { NavbarService } from './services/navbar.service';
+import { PerfilAlunoComponent } from './pages/aluno/perfil-aluno/perfil-aluno.component';
+import { EventoDetalhesComponent } from './pages/visitante/evento-detalhes/evento-detalhes.component';
 import { CardEventoMaiorComponent } from './components/card-evento-maior/card-evento-maior.component';
-import { EventsPageComponent } from './pages/visitante/events-page/events-page.component';
-import { AgendaPageComponent } from './pages/aluno/agenda-page/agenda-page.component';
-import { NotasFaltasComponent } from './pages/aluno/notas-faltas/notas-faltas.component';
+import { EventosPageComponent } from './pages/visitante/eventos-page/eventos-page.component';
+import { AgendaAlunoComponent } from './pages/aluno/agenda-aluno/agenda-aluno.component';
+import { HistoricoPageComponent } from './pages/aluno/historico-page/historico-page.component';
+import { EventoInscricaoComponent } from './pages/visitante/evento-inscricao/evento-inscricao.component';
+import { HomeProfessorComponent } from './pages/professor/home-professor/home-professor.component';
+import { PerfilProfessorComponent } from './pages/professor/perfil-professor/perfil-professor.component';
 
 @NgModule({
   declarations: [
@@ -37,26 +41,31 @@ import { NotasFaltasComponent } from './pages/aluno/notas-faltas/notas-faltas.co
     FirstPageComponent,
     CardEventoMenorComponent,
     CardNoticiaMaiorComponent,
-    HomePageComponent,
-    StudentCoursesComponent,
+    HomeAlunoComponent,
+    CursosAlunoComponent,
     CardQuadradoModeloComponent,
     NavbarComponent,
     FooterComponent,
     LoginPageComponent,
     InstitucionalPageComponent,
-    AvailableCoursesComponent,
-    CoursePageComponent,
+    CursosDisponiveisComponent,
+    CursoPageComponent,
     DrawerComponent,
-    ProfilePageComponent,
-    EventDetailsComponent,
+    PerfilAlunoComponent,
+    EventoDetalhesComponent,
     CardEventoMaiorComponent,
-    EventsPageComponent,
-    AgendaPageComponent,
-    NotasFaltasComponent,
+    EventosPageComponent,
+    AgendaAlunoComponent,
+    HistoricoPageComponent,
+    EventoInscricaoComponent,
+    HomeProfessorComponent,
+    PerfilProfessorComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
+    FormsModule,
     FullCalendarModule,
     ReactiveFormsModule // Adicionar ReactiveFormsModule aos imports
   ],

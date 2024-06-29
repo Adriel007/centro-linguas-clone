@@ -24,4 +24,7 @@
   color: #007bff;
   text-decoration: none;
   font-weight: bold;
-}
+  }
+.card a:hover {
+  color: var(--vermelho-base);
+  }

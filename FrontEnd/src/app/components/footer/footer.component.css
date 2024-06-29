@@ -4,6 +4,10 @@
     margin-top: 1rem;
 }
 
+.conteudo-principal.professor {
+    background-color: var(--vermelho-base);
+}
+
 .ctn-items {
     display: flex;
     justify-content: flex-end;

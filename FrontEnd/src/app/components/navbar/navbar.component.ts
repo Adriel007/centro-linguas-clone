@@ -1,5 +1,5 @@
 import { Component, HostListener } from '@angular/core';
-import { NavbarService } from './navbar.service';
+import { NavbarService } from '../../services/navbar.service';
 
 @Component({
   selector: 'app-navbar',
@@ -7,31 +7,28 @@ import { NavbarService } from './navbar.service';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent {
-  isMenuOpen: boolean = false; // Adiciona uma variável para rastrear se o menu está aberto
+  isMenuOpen: boolean = false;
 
   constructor(public navbarService: NavbarService) {
-    // Adiciona um listener para o evento beforeunload ao inicializar o componente
     window.addEventListener('beforeunload', () => {
       this.logoutOnWindowClose();
     });
   }
 
   toggleMenu() {
-    this.isMenuOpen = !this.isMenuOpen; // Alterna o estado do menu entre aberto e fechado
+    this.isMenuOpen = !this.isMenuOpen;
   }
 
   login() {
-    // Lógica para efetuar login
-    this.navbarService.setLoggedIn(true);
+    // Exemplo de login
+    this.navbarService.setLoggedIn(true, 'aluno');
   }
 
   logout() {
-    // Lógica para efetuar logout
     this.navbarService.setLoggedIn(false);
   }
 
   logoutOnWindowClose() {
-    // Efetua logout quando o navegador está prestes a ser fechado
     this.navbarService.setLoggedIn(false);
   }
 

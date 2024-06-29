@@ -1,4 +1,4 @@
-<main class="container-principal">
+<div class="container-principal">
   <div class="ctn-superior">
     <h2 class="titulo-h2">Próximos Eventos</h2>
     <hr>
@@ -12,8 +12,19 @@
       <h2 class="titulo-h2">Noticias</h2>
       <hr>
       <div class="ctn-inferior-noticias-cards">
-        <app-card-noticia-maior></app-card-noticia-maior>
+        <div class="carousel">
+          <div class="carousel-content">
+            <div *ngFor="let noticia of noticias; let i = index" [class.active]="i === activeIndex"
+              class="carousel-item">
+              <app-card-noticia-maior [cardTitulo]="noticia.titulo" [cardDescricao]="noticia.descricao"
+                [cardLink]="noticia.link" [cardUrl]="noticia.url"></app-card-noticia-maior>
+            </div>
+          </div>
+          <button class="prev" (click)="prev()">&#10094;</button>
+          <button class="next" (click)="next()">&#10095;</button>
+        </div>
       </div>
+
     </div>
     <div class="ctn-inferior-recados">
       <h2 class="titulo-h2">Recados</h2>
@@ -37,4 +48,4 @@
       </div>
     </div>
   </div>
-</main>
+</div>

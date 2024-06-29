@@ -1,26 +1,38 @@
 
-.container {
+.container-principal {
     display: flex;
-    align-items: center;
-    margin: 1rem 3rem;
-    justify-content: space-between;
+    margin: 5rem 3rem;
+    align-self: center;
     align-items: center;
     gap: 2rem;
+    height: auto;
+}
+
+hr{
+    width: 1px;
+    height: 500px;
+}
+
+.ctn-form{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.ctn-form h2 {
+    font-size: 24px;
+    color: #005C6D;
 }
 
 .login-form {
     flex: 1;
-    width: 50%;
+    width: 100%;
     padding: 40px;
     background-color: #F5F5F5;
     border: 1px solid #005C6D;
     box-shadow: 0px 7px 4px rgba(0, 0, 0, 0.25);
     border-radius: 8px;
-}
-
-.login-form h2 {
-    font-size: 24px;
-    color: #005C6D;
 }
 
 .login-form input[type="text"],
@@ -46,8 +58,8 @@
 }
 
 .description {
-    flex: 2;
-    width: 40%;
+    flex: 1.5;
+    width: 100%;
     text-align: center;
 }
 

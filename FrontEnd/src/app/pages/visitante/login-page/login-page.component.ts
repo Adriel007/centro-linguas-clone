@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { AuthService } from '../../../services/auth.service';
-import { NavbarService } from '../../../components/navbar/navbar.service';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { NavbarService } from '../../../services/navbar.service';
 
 @Component({
   selector: 'app-login-page',
@@ -15,23 +15,25 @@ export class LoginPageComponent {
   constructor(
     private fb: FormBuilder,
     private authService: AuthService,
-    private navbarService: NavbarService,
-    private router: Router
+    private router: Router,
+    private navbarService: NavbarService
   ) {
     this.loginForm = this.fb.group({
       email: ['', [Validators.required, Validators.email]],
-      password: ['', [Validators.required]]
+      password: ['', Validators.required]
     });
   }
 
   login() {
     if (this.loginForm.valid) {
       const { email, password } = this.loginForm.value;
-      if (this.authService.login(email, password)) {
-        this.navbarService.setLoggedIn(true);
-        this.router.navigate(['/home']);
+      const isLoggedIn = this.authService.login(email, password);
+      if (isLoggedIn) {
+        const userType = email === 'professor@example.com' ? 'professor' : 'aluno';
+        this.navbarService.setLoggedIn(true, userType);
+        this.router.navigate([userType === 'professor' ? '/home-professor' : '/home-aluno']);
       } else {
-        alert('Login falhou! Verifique suas credenciais.');
+        alert('Credenciais inválidas');
       }
     }
   }
