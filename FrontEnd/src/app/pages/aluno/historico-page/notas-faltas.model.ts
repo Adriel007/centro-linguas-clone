@@ -4,5 +4,6 @@ export interface NotaFalta {
   nota1: number;
   nota2: number;
   media: number;
+  presencas: number;
   faltas: number;
 }

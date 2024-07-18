@@ -23,6 +23,9 @@ import { HistoricoPageComponent } from './pages/aluno/historico-page/historico-p
 import { AuthGuard } from './guards/auth.guard';
 import { EventoInscricaoComponent } from './pages/visitante/evento-inscricao/evento-inscricao.component';
 import { HomeProfessorComponent } from './pages/professor/home-professor/home-professor.component';
+import { TurmasProfessorComponent } from './pages/professor/turmas-professor/turmas-professor.component';
+import { TurmaPageComponent } from './pages/professor/turma-page/turma-page.component';
+import { PerfilProfessorComponent } from './pages/professor/perfil-professor/perfil-professor.component';
 
 const routes: Routes = [
   { path: '', component: FirstPageComponent, title: 'Centro de Línguas' },
@@ -36,13 +39,16 @@ const routes: Routes = [
   // Rotas dos alunos com AuthGuard
   { path: 'home-aluno', component: HomeAlunoComponent, title: 'Centro de Línguas', canActivate: [AuthGuard] },
   { path: 'meus-cursos', component: CursosAlunoComponent, title: 'Meus Cursos | Centro de Línguas', canActivate: [AuthGuard] },
-  { path: 'curso', component: CursoPageComponent, title: 'Curso | Centro de Línguas', canActivate: [AuthGuard] },
+  { path: 'curso-pagina', component: CursoPageComponent, title: 'Curso | Centro de Línguas', canActivate: [AuthGuard] },
   { path: 'perfil-aluno', component: PerfilAlunoComponent, title: 'Meu Perfil | Centro de Línguas', canActivate: [AuthGuard] },
   { path: 'agenda', component: AgendaAlunoComponent, title: 'Agenda | Centro de Línguas', canActivate: [AuthGuard] },
   { path: 'historico', component: HistoricoPageComponent, title: 'Histórico | Centro de Línguas', canActivate: [AuthGuard] },
   
   // Rotas dos professores
-  { path: 'home-professor', component: HomeProfessorComponent, title: 'Home | Centro de Línguas', canActivate: [AuthGuard] }
+  { path: 'home-professor', component: HomeProfessorComponent, title: 'Home | Centro de Línguas', canActivate: [AuthGuard] },
+  { path: 'perfil-professor', component: PerfilProfessorComponent, title: 'Meus Dados | Centro de Línguas', canActivate: [AuthGuard] },
+  { path: 'turmas-professor', component: TurmasProfessorComponent, title: 'Minhas Turmas | Centro de Línguas', canActivate: [AuthGuard] },
+  { path: 'turma-pagina', component: TurmaPageComponent, title: 'Turma | Centro de Línguas', canActivate: [AuthGuard] }
 
 ];
 

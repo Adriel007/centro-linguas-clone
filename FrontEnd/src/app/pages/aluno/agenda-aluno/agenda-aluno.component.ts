@@ -11,8 +11,8 @@ import interactionPlugin from '@fullcalendar/interaction';
 })
 export class AgendaAlunoComponent {
   eventos: EventInput[] = [
-    { title: 'Evento 1', date: '2024-06-01' },
-    { title: 'Evento 2', date: '2024-06-02' }
+    { title: 'Evento 1', date: '2024-08-01' },
+    { title: 'Evento 2', date: '2024-08-02' }
   ];
 
   opcoesCalendarioMes: CalendarOptions = {
@@ -33,16 +33,19 @@ export class AgendaAlunoComponent {
     selectable: true,
     editable: true,
     contentHeight: '60vh',
-
   };
 
   lidarComCliqueNaData(arg: any) {
     const titulo = prompt('Insira o título do evento:');
     if (titulo) {
-      this.eventos = [
-        ...this.eventos,
-        { title: titulo, date: arg.dateStr }
-      ];
+      const novoEvento = { title: titulo, date: arg.dateStr };
+      this.eventos = [...this.eventos, novoEvento];
+      this.atualizarEventos();
     }
+  }
+
+  atualizarEventos() {
+    this.opcoesCalendarioMes = { ...this.opcoesCalendarioMes, events: this.eventos };
+    this.opcoesCalendarioSemana = { ...this.opcoesCalendarioSemana, events: this.eventos };
   }
 }

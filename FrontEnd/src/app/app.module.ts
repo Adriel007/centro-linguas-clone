@@ -34,6 +34,8 @@ import { HistoricoPageComponent } from './pages/aluno/historico-page/historico-p
 import { EventoInscricaoComponent } from './pages/visitante/evento-inscricao/evento-inscricao.component';
 import { HomeProfessorComponent } from './pages/professor/home-professor/home-professor.component';
 import { PerfilProfessorComponent } from './pages/professor/perfil-professor/perfil-professor.component';
+import { TurmasProfessorComponent } from './pages/professor/turmas-professor/turmas-professor.component';
+import { TurmaPageComponent } from './pages/professor/turma-page/turma-page.component';
 
 @NgModule({
   declarations: [
@@ -60,6 +62,8 @@ import { PerfilProfessorComponent } from './pages/professor/perfil-professor/per
     EventoInscricaoComponent,
     HomeProfessorComponent,
     PerfilProfessorComponent,
+    TurmasProfessorComponent,
+    TurmaPageComponent,
   ],
   imports: [
     BrowserModule,

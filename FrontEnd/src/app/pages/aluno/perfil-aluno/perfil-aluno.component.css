@@ -3,19 +3,6 @@
     gap: 2rem;
 }
 
-.nav-links {
-    display: flex;
-    justify-content: space-between;
-    background-color: #800000;
-    padding: 1rem;
-    list-style: none;
-}
-
-.nav-links li {
-    color: white;
-    cursor: pointer;
-}
-
 .container-geral {
     display: flex;
     margin: 1rem 3rem;

@@ -1,0 +1,67 @@
+<div class="container-principal">
+    <h2>TurmaID</h2>
+    <hr>
+    <div class="container-geral">
+        <div class="container-esquerdo">
+            <!-- Navegação -->
+            <ul class="navigation">
+                <li (click)="goBack()">Voltar</li>
+                <li (click)="showContent('informacoesTurma')">Informações do turma</li>
+                <li (click)="showContent('conteudoMinistrado')">Conteúdo Ministrado</li>
+                <li (click)="showContent('tarefas')">Tarefas</li>
+                <li (click)="showContent('notasEFaltas')">Notas e Faltas</li>
+                <li (click)="showContent('relatorioDesempenho')">Relatório de Desempenho</li>
+            </ul>
+        </div>
+        <div class="container-direito">
+            <div *ngIf="selectedContent === 'informacoesTurma'">
+                <h2>Informações da turma - ING.BAS.2 - 2024/1</h2>
+                <hr>
+                <table class="tabela-turma-info">
+                    <tr>
+                        <th class="label">Período das Aulas</th>
+                        <td class="value">Segundas e Quartas, das 13h às 15h</td>
+                    </tr>
+                    <tr>
+                        <th class="label">Sala</th>
+                        <td class="value">515</td>
+                    </tr>
+                    <tr>
+                </table>
+                <!-- Tabela Alunos -->
+                <h3>Alunos</h3>
+                <hr>
+                <table class="tabela-turma-alunos">
+                    <thead>
+                        <tr>
+                            <th>Nome</th>
+                            <th>Matrícula</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let aluno of alunos">
+                            <td>{{ aluno.nome }}</td>
+                            <td>{{ aluno.matricula }}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div *ngIf="selectedContent === 'conteudoMinistrado'">
+                <h2>Conteúdo Ministrado</h2>
+                <hr>
+            </div>
+            <div *ngIf="selectedContent === 'tarefas'">
+                <h2>Tarefas</h2>
+                <hr>
+            </div>
+            <div *ngIf="selectedContent === 'notasEFaltas'">
+                <h2>Notas e Faltas</h2>
+                <hr>
+            </div>
+            <div *ngIf="selectedContent === 'relatorioDesempenho'">
+                <h2>Relatório</h2>
+                <hr>
+            </div>
+        </div>
+    </div>
+</div>

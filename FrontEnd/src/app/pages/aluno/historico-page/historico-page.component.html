@@ -35,12 +35,14 @@
             <thead>
                 <tr>
                     <th>Disciplina</th>
+                    <th>Presenças</th>
                     <th>Faltas</th>
                 </tr>
             </thead>
             <tbody>
                 <tr *ngFor="let disciplina of notasFaltas">
                     <td>{{ disciplina.curso }}</td>
+                    <td>{{ disciplina.presencas }}</td>
                     <td>{{ disciplina.faltas }}</td>
                 </tr>
             </tbody>

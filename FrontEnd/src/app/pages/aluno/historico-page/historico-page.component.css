@@ -26,35 +26,43 @@
 .notas table,
 .faltas table {
   width: 100%;
-  border-collapse: collapse;
-  table-layout: auto;
-  margin-bottom: 20px;
-  box-shadow: 1px 2px 4px 2px rgba(0, 0, 0, 0.2); /* Adiciona sombra */
+  border-collapse: separate;
+  border-spacing: 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   border-radius: 8px;
   overflow: hidden;
+  border: var(--vermelho-escuro-10) 2px solid;
 }
 
 .notas th,
 .faltas th,
 .notas td,
 .faltas td {
+  width: 100px;
   padding: 16px;
   text-align: center;
-  border: #333 3px inherit;
+}
+ 
+.notas td,
+.faltas td {
+  border-top: var(--vermelho-escuro-10) 2px solid;
 }
 
 .notas th,
 .faltas th {
-  background-color: darkred;
+  background-color: var(--vermelho-escuro-10);
   color: #f0f0f0;
 }
 
 .notas h3,
 .faltas h3 {
-  margin-top: 0;
-  margin-bottom: 10px;
+  margin: 10px;
 }
 
 td:nth-child(even) {
-  background-color: #f2f2f2;
+  background-color: #f1f1f1;
+}
+
+td:not(:last-child) {
+  border-right: 2px solid var(--vermelho-escuro-10);
 }

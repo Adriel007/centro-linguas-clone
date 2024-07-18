@@ -1,0 +1,68 @@
+.container-principal {
+    margin: 1rem 3rem;
+}
+
+.container-geral {
+    display: flex;
+    margin: 1rem auto;
+    gap: 1rem;
+}
+
+.container-esquerdo {
+    width: 20%;
+}
+
+.container-direito {
+    flex: 1;
+    margin-left: 1rem;
+}
+
+.navigation {
+    list-style-type: none;
+    padding: 10px;
+    background-color: var(--azul-base);
+    border-radius: 1rem;
+}
+
+.navigation li {
+    cursor: pointer;
+    padding: 0.5rem;
+    color: #f0f0f0;
+    border-radius: 4px;
+    margin-bottom: 0.5rem;
+}
+
+.navigation li:hover {
+    background-color: #f3f3f3;
+    color: #333;
+}
+
+/* INFORMAÇÕES TURMA */
+
+.tabela-turma-info, .tabela-turma-alunos {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    overflow: hidden;
+    border: var(--azul-base) 2px solid;
+}
+
+td, th {
+    background-color: transparent;
+    padding: 0.5rem;
+}
+
+.tabela-turma-alunos th, .tabela-turma-info th {
+    background-color: var(--azul-base);
+    color: #f0f0f0;
+}
+
+tr:nth-child(even) {
+    background-color: #f1f1f1;
+}
+
+td:nth-child(even){
+    border-left: 1px solid var(--azul-base);
+}

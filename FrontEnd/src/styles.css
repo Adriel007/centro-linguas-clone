@@ -33,10 +33,18 @@ hr {
     margin-bottom: 0.5rem;
 }
 
-h2{
+h1, h2, h3 {
     color: var(--primario-titulos-hover);
 }
 
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+
+/* Cor dos botões do calendário */
+.fc .fc-button .fc-icon {
+    color: antiquewhite;
+}
+

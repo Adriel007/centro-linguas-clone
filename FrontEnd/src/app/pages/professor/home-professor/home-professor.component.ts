@@ -9,17 +9,17 @@ import { Postagem } from '../../../models/postagem.model';
 })
 export class HomeProfessorComponent implements OnInit {
   nomeProfessor: string | undefined;
-  cursos: any[] | undefined;
+  turmas: any[] | undefined;
   novaPostagem: Postagem = { idPostagem: 0, nome: '', capaPost: '', descricao: '', idMural: 0 };
 
   constructor(private professorService: ProfessorService) { }
 
   ngOnInit() {
     this.nomeProfessor = 'Professor Nome'; // Substitua por chamada ao backend
-    this.cursos = [
-      { cardConteudo: 'Curso 1', cardNivel: 'Básico', cardLink: '/curso1' },
-      { cardConteudo: 'Curso 2', cardNivel: 'Intermediário', cardLink: '/curso2' }
-      // Adicione mais cursos conforme necessário
+    this.turmas = [
+      { cardConteudo: 'Turma 1', cardNivel: 'Básico', cardLink: '/turma-pagina' },
+      { cardConteudo: 'Turma 2', cardNivel: 'Intermediário', cardLink: '/turma-pagina' }
+      // Adicione mais turmas conforme necessário
     ];
   }
 

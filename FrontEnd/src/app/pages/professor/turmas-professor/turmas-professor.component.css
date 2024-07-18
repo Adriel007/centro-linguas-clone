@@ -1,0 +1,27 @@
+.container-principal {
+    margin: 1rem 3rem;
+}
+
+.ctn-geral-turmas {
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.ctn-andamento,
+.ctn-concluido {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.ctn-andamento-turmas,
+.ctn-concluido-turmas {
+    display: flex;
+    overflow-x: auto;
+    /* Adiciona uma barra de rolagem horizontal quando necessário */
+    gap: 1rem;
+    padding-bottom: 1rem;
+    /* Adiciona um espaçamento na parte inferior para melhorar a aparência */
+}

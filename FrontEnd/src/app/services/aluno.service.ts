@@ -10,6 +10,11 @@ export class AlunoService {
 
   constructor(private http: HttpClient) { }
 
+  // Método para obter todos os alunos
+  getAlunos(): Observable<any[]> {
+    return this.http.get<any[]>(this.apiUrl);
+  }
+
   // Método para obter as notas de um aluno
   getNotas(id: number): Observable<any> {
     return this.http.get<any>(`${this.apiUrl}/${id}/notas`);
