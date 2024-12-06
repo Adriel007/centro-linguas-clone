@@ -1,0 +1,153 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\leona\\source\\repos\\centro-linguas-clone\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\leona\\source\\repos\\centro-linguas-clone\\app\\models\\arquivos.model.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:app\\models\\arquivos.model.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\leona\\source\\repos\\centro-linguas-clone\\Banco de dados\\centro_dump.sql||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Banco de dados\\centro_dump.sql||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\leona\\source\\repos\\centro-linguas-clone\\app\\controllers\\professor.controller.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:app\\controllers\\professor.controller.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\leona\\source\\repos\\centro-linguas-clone\\app\\routes\\professor.routes.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:app\\routes\\professor.routes.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\leona\\source\\repos\\centro-linguas-clone\\app\\middleware\\multer.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:app\\middleware\\multer.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\leona\\source\\repos\\centro-linguas-clone\\app\\models\\index.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:app\\models\\index.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\leona\\source\\repos\\centro-linguas-clone\\app\\models\\aluno.model.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:app\\models\\aluno.model.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\leona\\Source\\Repos\\centro-linguas-clone\\app\\controllers\\aluno.controller.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:app\\controllers\\aluno.controller.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "index.js",
+              "DocumentMoniker": "C:\\Users\\leona\\source\\repos\\centro-linguas-clone\\app\\models\\index.js",
+              "RelativeDocumentMoniker": "app\\models\\index.js",
+              "ToolTip": "C:\\Users\\leona\\source\\repos\\centro-linguas-clone\\app\\models\\index.js",
+              "RelativeToolTip": "app\\models\\index.js",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAZAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-10-23T05:08:46.874Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "centro_dump.sql",
+              "DocumentMoniker": "C:\\Users\\leona\\source\\repos\\centro-linguas-clone\\Banco de dados\\centro_dump.sql",
+              "RelativeDocumentMoniker": "Banco de dados\\centro_dump.sql",
+              "ToolTip": "C:\\Users\\leona\\source\\repos\\centro-linguas-clone\\Banco de dados\\centro_dump.sql",
+              "RelativeToolTip": "Banco de dados\\centro_dump.sql",
+              "ViewState": "AQIAACgBAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2024-10-23T04:55:37.736Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "aluno.model.js",
+              "DocumentMoniker": "C:\\Users\\leona\\source\\repos\\centro-linguas-clone\\app\\models\\aluno.model.js",
+              "RelativeDocumentMoniker": "app\\models\\aluno.model.js",
+              "ToolTip": "C:\\Users\\leona\\source\\repos\\centro-linguas-clone\\app\\models\\aluno.model.js",
+              "RelativeToolTip": "app\\models\\aluno.model.js",
+              "ViewState": "AQIAAAEAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-10-23T04:36:23.045Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "arquivos.model.js",
+              "DocumentMoniker": "C:\\Users\\leona\\source\\repos\\centro-linguas-clone\\app\\models\\arquivos.model.js",
+              "RelativeDocumentMoniker": "app\\models\\arquivos.model.js",
+              "ToolTip": "C:\\Users\\leona\\source\\repos\\centro-linguas-clone\\app\\models\\arquivos.model.js",
+              "RelativeToolTip": "app\\models\\arquivos.model.js",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAzAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-10-23T04:35:46.285Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "multer.js",
+              "DocumentMoniker": "C:\\Users\\leona\\source\\repos\\centro-linguas-clone\\app\\middleware\\multer.js",
+              "RelativeDocumentMoniker": "app\\middleware\\multer.js",
+              "ToolTip": "C:\\Users\\leona\\source\\repos\\centro-linguas-clone\\app\\middleware\\multer.js",
+              "RelativeToolTip": "app\\middleware\\multer.js",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-10-23T03:19:42.696Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "professor.controller.js",
+              "DocumentMoniker": "C:\\Users\\leona\\source\\repos\\centro-linguas-clone\\app\\controllers\\professor.controller.js",
+              "RelativeDocumentMoniker": "app\\controllers\\professor.controller.js",
+              "ToolTip": "C:\\Users\\leona\\source\\repos\\centro-linguas-clone\\app\\controllers\\professor.controller.js",
+              "RelativeToolTip": "app\\controllers\\professor.controller.js",
+              "ViewState": "AQIAAEUAAAAAAAAAAAAAwFsAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-10-23T03:06:38.137Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "professor.routes.js",
+              "DocumentMoniker": "C:\\Users\\leona\\source\\repos\\centro-linguas-clone\\app\\routes\\professor.routes.js",
+              "RelativeDocumentMoniker": "app\\routes\\professor.routes.js",
+              "ToolTip": "C:\\Users\\leona\\source\\repos\\centro-linguas-clone\\app\\routes\\professor.routes.js",
+              "RelativeToolTip": "app\\routes\\professor.routes.js",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAACAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-10-23T03:06:28.17Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "aluno.controller.js",
+              "DocumentMoniker": "C:\\Users\\leona\\source\\repos\\centro-linguas-clone\\app\\controllers\\aluno.controller.js",
+              "RelativeDocumentMoniker": "app\\controllers\\aluno.controller.js",
+              "ToolTip": "C:\\Users\\leona\\source\\repos\\centro-linguas-clone\\app\\controllers\\aluno.controller.js",
+              "RelativeToolTip": "app\\controllers\\aluno.controller.js",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAHAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-10-23T02:42:10.633Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
