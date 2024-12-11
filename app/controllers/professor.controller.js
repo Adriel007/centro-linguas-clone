@@ -3,17 +3,15 @@ const path = require('path');
 const multer = require('multer');
 const fs = require('fs');
 
-
 const armazenamento = multer.diskStorage({
 	destination: (req, file, cb) => {
 		const userType = req.params.userType;
 		const fileType = req.params.fileType;
-
 		const dir = `uploads/${userType}/${fileType}`;
 
 		fs.mkdirSync(dir, { recursive: true }); //cria o diretorio caso não exista
 
-		cb(null, dir); //pasta onde os arquivos serao salvos
+		cb(null, dir); //caminho da pasta onde os arquivos serao salvos
 	},
 	filename: (req, file, cb) => {
 		cb(null, Date.now() + path.extname(file.originalname)); //pega pelo nome do arquivo salvo
@@ -37,7 +35,6 @@ const upload = multer({
 });
 
 //simulando chamada no db
-
 const relatorios = {}; //armazena relatorios semestrais
 const arquivosPorProfessor = {}; //armazena arquivos por professor especifico
 
@@ -47,17 +44,12 @@ exports.getRelatorio = (req, res) => {
 	const relatorio = relatorios[id];//para obter o relatorio especifico de um aluno
 
 	if (!relatorio) {
-
-		return res.status(404).json({ message: ' RELATÓRIO NÃO ENCONTRADO.' });
+		return res.status(404).json({ message: 'RELATÓRIO NÃO ENCONTRADO.' });
 	}
-
 	res.json(relatorio);
-
 };
 
-
 //funçao p obter os arquivos de um professor especifico
-
 exports.getArquivos = (req, res) => {
 	const { id } = req.params;
 	const arquivo = arquivosPorProfessor[id] || []; //retorna aruivos ou um array vazio
@@ -65,7 +57,6 @@ exports.getArquivos = (req, res) => {
 };
 
 //funçao para fazer o upload de um arquivo novo
-
 exports.uploadArquivo = async (req, res) => {
 	const { id, userType, fileType } = req.params;
 	const arquivo = req.file; //multer vai enviar o arquivo
@@ -73,7 +64,6 @@ exports.uploadArquivo = async (req, res) => {
 	if (!arquivo) {
 		return res.status(400).json({message: 'Nenhum arquivo foi enviado.'}); 
 	}
-
 	try {
 		const novoArquivo = await db.Arquivo.create({
 			nome: arquivo.filename, //nome do arquivo salvo com timestamp
@@ -83,6 +73,7 @@ exports.uploadArquivo = async (req, res) => {
 			usuarioId: id_professor, //id do prof
 			caminho: `uploads/${userType}/${fileType}/${arquivo.filename}` //caminho completo do arquivo
 		});
+
 		res.status(201).json({ message: 'Arquivo enviado com sucesso.', arquivo: novoArquivo });
 	} catch (Error) {
 		console.error(error);

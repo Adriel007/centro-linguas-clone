@@ -5,8 +5,8 @@ const fs = requite('fs');
 //funçao pra criar os subdiretorios com base no tipo de usuario e o tipo de arquivo
 const armazenamento = multer.diskStorage({
     destination: (req, file, cb) => {
-        const userType = req.params.userType; //tipo: aluno, professor, administrador
-        const fileType = req.params.fileType; //tipo: tarefas, materiais didaticos, certificados, etc
+        const userType = req.params.userType; //tipo aluno, professor, administrador
+        const fileType = req.params.fileType; //tipo tarefas, materiais didaticos, certificados, etc
 
         const dir = `uploads/${userType}/${fileType}`;
         
@@ -19,9 +19,7 @@ const armazenamento = multer.diskStorage({
     }
 });
 
-//funçao pra filtrar os formatos permitidos
-
-//funçao para limitar o tamanho do arquivo
+//funçao para filtrar e limitar o tamanho do arquivo permitido
 const upload = multer({
     storage: armazenamento,
     limits: { fileSize: 100 * 1024 * 1024 },//limite de 100mb
@@ -37,5 +35,4 @@ const upload = multer({
             }
     }
 });
-
 module.exports = upload;
