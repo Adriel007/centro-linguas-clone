@@ -18,7 +18,7 @@ The following table shows overview of the Rest APIs that will be exported:
 
 ]
 
-This line its just a test
+This line its just a
 
 Front-end that works well with this Back-end
 > [Axios Client](https://www.bezkoder.com/axios-request/)
