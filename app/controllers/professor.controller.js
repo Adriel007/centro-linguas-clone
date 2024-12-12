@@ -11,7 +11,7 @@ const armazenamento = multer.diskStorage({
 
 		fs.mkdirSync(dir, { recursive: true }); //cria o diretorio caso não exista
 
-		cb(null, dir); //caminho da pasta onde os arquivos serao salvosdsf
+		cb(null, dir); //caminho da pasta onde os arquivos serao salvosdsf fdfddf
 	},
 	filename: (req, file, cb) => {
 		cb(null, Date.now() + path.extname(file.originalname)); //pega pelo nome do arquivo salvo
