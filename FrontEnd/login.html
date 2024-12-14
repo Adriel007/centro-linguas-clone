@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap/dist/css/bootstrap.css">
+    <script defer src="css/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <!-- bootstrap icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- fontes -->
+    <link href='https://fonts.googleapis.com/css?family=Roboto Slab' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <!-- css -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/login.css">
+</head>
+<body class="d-flex flex-column" style="background-color: var(--branco1);">
+
+    <header class="d-flex justify-content-start pt-3 ps-4 mb-5">
+        <a href="home.html" class="btn bgazul1 d-flex gap-1">
+            <i class="bi-arrow-left" style="transform: scale(1.25);"></i>
+            <p class="m-0">Voltar</p>
+        </a>
+    </header>
+    
+    <main class="container d-flex flex-column justify-content-center">
+
+        <div class="row row-cols-1 row-cols-md-2">
+
+            <!-- imagem e mensagem -->
+            <div class="col login-mensagem">
+                <div class="container p-5 d-flex flex-column">
+                    <img src="assets/centro de linguas.png" alt="" class="mx-auto mb-3 img-fluid" style="width: 20rem;">
+                    <p class="azul2">Bem-vindo ao nosso sistema! Esperamos que tenha uma ótima experiência navegando por aqui. Esse site foi projetado para você ter uma ótima experiência de navegabilidade. Aproveite seus estudos!</p>
+                </div>
+            </div>
+
+            <!-- form -->
+            <div class="col">
+                <div class="container d-flex flex-column gap-3">
+                    <h1 class="titulo-principal">Login</h1>
+
+                    <form action="home-logado.html" method="post" class="container d-flex flex-column">
+
+                        <!-- inputs -->
+                        <div class="mb-3">
+                            <label for="email" class="form-label azul1 fw-bold">E-mail</label>
+                            <input
+                                type="text"
+                                class="form-control"
+                                name="email"
+                                id="email"
+                                aria-describedby="email"
+                                placeholder="teste@email.com"
+                            />
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="senha" class="form-label azul1 fw-bold">Senha</label>
+                            <input
+                                type="password"
+                                class="form-control"
+                                name="senha"
+                                id="senha"
+                                placeholder="******"
+                            />
+                        </div>
+                        
+
+                        <!-- lembre de mim e recuperar senha -->
+                        <div class="container d-flex justify-content-md-between lembre-senha">
+
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="lembrar" />
+                                <label class="form-check-label azul2" for="lembrar">Lembre de mim</label>
+                            </div>
+
+                            <a href="#" class="azul2">Recuperar senha</a>
+
+                        </div>
+                        
+
+                        <button type="submit" class="btn branco1 mt-3 mx-auto py-3 px-5" 
+                        style="background-color: var(--verde1);">Entrar</button>
+
+
+                        <!-- Sem conta ainda? - cadastro -->
+                        <a
+                            href="#"
+                            role="button"
+                            class="azul2 fw-bold text-center mt-2 text-decoration-none"
+                            data-bs-toggle="modal"
+                            data-bs-target="#modalId"
+                        >
+                            Sem conta ainda?
+                        </a>
+                    </form>
+
+                </div>
+            </div>
+
+        </div>
+
+
+        <!-- modal cadastro -->
+        <div
+            class="modal fade"
+            id="modalId"
+            tabindex="-1"
+            
+            role="dialog"
+            aria-labelledby="modalTitleId"
+            aria-hidden="true"
+        >
+            <div
+                class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-lg"
+                role="document"
+            >
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title azul2" id="modalTitleId">
+                            Faça seu cadastro
+                        </h5>
+                        <button
+                            type="button"
+                            class="btn-close"
+                            data-bs-dismiss="modal"
+                            aria-label="Close"
+                        ></button>
+                    </div>
+                    
+                    <!-- form cadastro -->
+                    <form class="row row-cols-1 row-cols-md-2 modal-body" action="home-logado.html" method="get">
+
+                        <div class="col">
+            
+                            <div class="mb-3">
+                                <label for="nome" class="form-label">Nome completo*</label>
+                                <input
+                                    type="text"
+                                    class="form-control"
+                                    name="nome"
+                                    id="nome"
+                                    required
+                                />
+                            </div>
+                            <div class="mb-3">
+                                <label for="cpf" class="form-label">CPF*</label>
+                                <input
+                                    type="number"
+                                    class="form-control"
+                                    name="cpf"
+                                    id="cpf"
+                                    required
+                                />
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label for="matricula" class="form-label">Nº da matrícula*</label>
+                                <input
+                                    type="number"
+                                    class="form-control"
+                                    name="matricula"
+                                    id="matricula"
+                                    required
+                                />
+                            </div>
+                        </div>
+                        
+                        <div class="col">
+                            
+                            <div class="mb-3">
+                                <label for="curso" class="form-label">Curso*</label>
+                                <input
+                                    type="text"
+                                    class="form-control"
+                                    name="curso"
+                                    id="curso"
+                                    required
+                                />
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label for="email" class="form-label">E-mail*</label>
+                                <input
+                                    type="email"
+                                    class="form-control"
+                                    name="email"
+                                    id="email"
+                                    required
+                                />
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label for="telefone" class="form-label">Telefone / WhatsApp*</label>
+                                <input
+                                    type="tel"
+                                    class="form-control"
+                                    name="telefone"
+                                    id="telefone"
+                                    required
+                                />
+                            </div>
+                            
+                        </div>
+                        
+                        <div class="d-flex w-100" style="height: 70px;">
+                            <button
+                                type="submit"
+                                class="btn w-100 branco1"
+                                style="background-color: var(--verde1);"
+                            >
+                                Cadastrar
+                            </button>
+                        </div>
+        
+            
+                    </form>
+                    
+                </div>
+            </div>
+        </div>
+        
+
+    </main>
+    
+</body>
+</html>
