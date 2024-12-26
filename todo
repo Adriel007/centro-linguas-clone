@@ -1,0 +1,18 @@
+<!-- prettier-ignore -->
+Este arquivo tem como objetivo ser uma lista pessoal para os desenvolvedores terem controle melhor sem necessidade de recorrer ao Trello.
+Evite alterar as listas pessoais, qualquer tarefa que possa ser feita por mais de uma pessoa pode ser posta no "Geral"
+
+------------------------------------- Adriel ----------------------------------------------------
+[   ] Analisar a real necessidade do arquivo "./Banco de Dados/centro_tabelas.sql", eliminar se necessário.
+[ x ] Aplicar uso de "./.env" para facilitar testes dos desenvolvedores e melhorar segurança.
+[   ] Modificar "./README.md" para explicar o projeto e suas principais tecnologias.
+[   ] Integrar Front e Back.
+[ x ] Construir um shell script em "./tests/" para facilitar testes de desenvolvimento com Docker (para quem for usar Docker).
+[ x ] Automatizar import do dump para criar database
+[   ] Tabela "Arquivos"
+
+-------------------------------------------------------------------------------------------------
+
+--------------------------------------- Geral ---------------------------------------------------
+
+-------------------------------------------------------------------------------------------------
