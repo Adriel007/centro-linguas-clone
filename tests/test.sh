@@ -18,6 +18,11 @@ if [ "$EUID" -ne 0 ]; then
     exit 1
 fi
 
+# Parar o container se ele estiver em execução
+if docker ps -q -f name=postgres-container &> /dev/null; then
+    docker stop postgres-container
+fi
+
 # Verificar se há algum processo usando a porta 5432
 if lsof -i :5432 &> /dev/null; then
     echo "Porta 5432 está em uso. Encerre todos os processos que usam essa porta com 'lsof -i :5432' e mate seu PID com 'kill <PID>'."
@@ -45,11 +50,6 @@ fi
 if ! command -v docker &> /dev/null; then
     apt update
     apt install docker-compose docker.io -y
-fi
-
-# Parar o container se ele estiver em execução
-if docker ps -q -f name=postgres-container &> /dev/null; then
-    docker stop postgres-container
 fi
 
 # Subir container do PostgreSQL
