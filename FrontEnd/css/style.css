@@ -41,6 +41,9 @@ a{
     background-color: var(--branco1);
     /* color: var(--branco1); */
 }
+.cinza2{
+    color: var(--cinza2);
+}
 .vermelho1{
     color: var(--vermelho1);
 }
@@ -62,6 +65,9 @@ a{
     background-color: var(--azul1);
     color: var(--branco1);
 }
+.bordaazul1{
+    border: 1px solid var(--azul1);
+}
 .azul2{
     color: var(--azul2);
 }
@@ -82,7 +88,7 @@ a{
     box-shadow: 0 2px 5px black;
 }
 
-/* uso espcífico */
+/* uso específico */
 
 .titulo-principal{
     --tamanho: 12px;
