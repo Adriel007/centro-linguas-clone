@@ -1,0 +1,43 @@
+.header-cor-fundo{
+    background-color: var(--vermelho2);
+}
+
+.header-links *{
+    text-decoration: underline;
+}
+/* color: var(--branco2); 
+transform: all 0.15s ease-in-out;
+}
+.header-links *:hover{
+    color: var(--cinza1);
+    transform: all 0.15s ease-in-out;
+    } */
+    
+.header-botao{
+    outline: None;
+    border: 2px solid var(--branco2);
+    background-color: transparent;
+    border-radius: 7.5px;
+    color: var(--branco2);
+    transition: all 0.15s ease-in-out;
+}
+
+.header-botao:hover{
+    color: var(--cinza1);
+    border-color: var(--cinza1);
+}
+/* 
+.navbar-brand{
+    flex-grow: 0;
+} */
+
+.footer-cor-fundo{
+    background-color: var(--azul1);
+}
+
+
+@media (min-width: 768px) {
+    .header-botao{
+        order: 1;
+    }
+}

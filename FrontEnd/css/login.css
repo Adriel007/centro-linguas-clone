@@ -1,0 +1,21 @@
+.login-mensagem{
+    border-right: 2px solid var(--cinza3);
+}
+
+
+
+
+@media (max-width: 992px) {
+    .lembre-senha{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .login-mensagem{
+        border: none;
+    }
+}

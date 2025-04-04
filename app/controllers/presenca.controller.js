@@ -2,35 +2,35 @@ const db = require("../models");
 const Presenca = db.presencas;
 
 exports.findAll = async (req, res) => {
-    try {
-      const data = await Presenca.findAll();
-      res.send(data);
-    } catch (err) {
-      res.status(500).send({
-        message: err.message || 'erro'
-      });
-    }
+  try {
+    const data = await Presenca.findAll();
+    res.send(data);
+  } catch (err) {
+    res.status(500).send({
+      message: err.message || "erro",
+    });
+  }
 };
 
 exports.findById = async (req, res) => {
-    const id = req.params.id;
-  
-    try {
-      const data = await Presenca.findByPk(id);
-  
-      if (data) {
-        res.send(data);
-      } else {
-        res.status(404).send({
-          message: `Presença com id=${id} não encontrada`
-        });
-      }
-    } catch (err) {
-      res.status(500).send({
-        message: "Erro, presença id=" + id
+  const id = req.params.id;
+
+  try {
+    const data = await Presenca.findByPk(id);
+
+    if (data) {
+      res.send(data);
+    } else {
+      res.status(404).send({
+        message: `Presença com id=${id} não encontrada`,
       });
     }
-  };  
+  } catch (err) {
+    res.status(500).send({
+      message: "Erro, presença id=" + id,
+    });
+  }
+};
 
 exports.createPresenca = async (req, res) => {
   try {
@@ -46,7 +46,7 @@ exports.createPresenca = async (req, res) => {
   } catch (err) {
     console.error(err);
     res.status(500).send({
-      erro: err.message || "Erro ao cadastrar presença"
+      erro: err.message || "Erro ao cadastrar presença",
     });
   }
 };
@@ -67,7 +67,7 @@ exports.updatePresenca = async (req, res) => {
     };
 
     await Presenca.update(presencaData, {
-      where: { id_presenca: presencaId }
+      where: { id_presenca: presencaId },
     });
 
     const updatedPresenca = await Presenca.findByPk(presencaId);
@@ -76,7 +76,7 @@ exports.updatePresenca = async (req, res) => {
   } catch (err) {
     console.error(err);
     res.status(500).send({
-      erro: err.message || "Erro ao atualizar presença."
+      erro: err.message || "Erro ao atualizar presença.",
     });
   }
 };

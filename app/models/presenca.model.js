@@ -1,6 +1,7 @@
-// Presenca model
 module.exports = (sequelize, Sequelize) => {
-    const Presenca = sequelize.define("tb_presenca", {
+  const Presenca = sequelize.define(
+    "tb_presenca",
+    {
       id_presenca: {
         type: Sequelize.INTEGER,
         primaryKey: true,
@@ -18,19 +19,20 @@ module.exports = (sequelize, Sequelize) => {
         type: Sequelize.INTEGER,
         allowNull: false,
       },
-    }, {
-      tableName: 'tb_presenca',
-      freezeTableName: true, 
+    },
+    {
+      tableName: "tb_presenca",
+      freezeTableName: true,
       timestamps: false,
+    }
+  );
+
+  Presenca.associate = (models) => {
+    Presenca.belongsTo(models.Matricula, {
+      foreignKey: "id_matricula",
+      as: "tb_matricula",
     });
-  
-    // Evento.associate = (models) => {
-    //   Presenca.belongsTo(models.Matricula, {
-    //     foreignKey: 'id_matricula',
-    //     as: 'tb_matricula',
-    //   });
-    // };
-  
-    return Presenca;
   };
-  
+
+  return Presenca;
+};

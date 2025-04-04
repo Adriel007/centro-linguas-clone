@@ -1,29 +1,31 @@
 const dbConfig = require("../config/db.config.js");
-
 const Sequelize = require("sequelize");
-const sequelize = new Sequelize(dbConfig.DB, dbConfig.USER, dbConfig.PASSWORD, {
-  host: dbConfig.HOST,
-  dialect: dbConfig.dialect,
 
-  pool: {
-    max: dbConfig.pool.max,
-    min: dbConfig.pool.min,
-    acquire: dbConfig.pool.acquire,
-    idle: dbConfig.pool.idle,
-  },
-});
+// Configurando a conexão com o banco de dados
+const sequelize = new Sequelize(
+  dbConfig.database,
+  dbConfig.user,
+  dbConfig.password,
+  {
+    host: dbConfig.host,
+    port: dbConfig.port,
+    dialect: dbConfig.dialect,
+    pool: dbConfig.pool,
+  }
+);
 
 const db = {};
 
+// Configurando os modelos
 db.Sequelize = Sequelize;
 db.sequelize = sequelize;
 
-// db.tutorials = require("./tutorial.model.js")(sequelize, Sequelize);
+// Registrando os modelos
 db.usuarios = require("./usuario.model.js")(sequelize, Sequelize);
 db.alunos = require("./aluno.model.js")(sequelize, Sequelize);
 db.notas = require("./notas.model.js")(sequelize, Sequelize);
 db.eventos = require("./evento.model.js")(sequelize, Sequelize);
 db.presencas = require("./presenca.model.js")(sequelize, Sequelize);
-
+db.arquivo = require("./arquivos.model.js")(sequelize, Sequelize.DataTypes);
 
 module.exports = db;

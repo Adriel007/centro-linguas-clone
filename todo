@@ -1,0 +1,33 @@
+<!-- prettier-ignore -->
+Este arquivo tem como objetivo ser uma lista pessoal para os desenvolvedores terem controle melhor sem necessidade de recorrer ao Trello.
+Evite alterar as listas pessoais, qualquer tarefa que possa ser feita por mais de uma pessoa pode ser posta no "Geral"
+
+------------------------------------- Adriel ----------------------------------------------------
+[ x ] Analisar a real necessidade do arquivo "./Banco de Dados/centro_tabelas.sql", eliminar se necessário.
+[ x ] Aplicar uso de "./.env" para facilitar testes dos desenvolvedores e melhorar segurança.
+[ x ] Modificar "./README.md" para explicar o projeto e suas principais tecnologias.
+[   ] Integrar Front e Back (quando ambos estiverem prontos).
+[ x ] Construir um shell script em "./tests/" para facilitar testes de desenvolvimento com Docker (para quem for usar Docker).
+[ x ] Automatizar import do dump para criar database
+[ x ] Tabela "tb_arquivos" criada e adicionada ao dump
+[   ] Testar CRUD de cada Controller
+    [ x ] Aluno
+    [   ] Evento
+    [   ] Horarios
+    [   ] Notas
+    [   ] Presenca
+    [   ] Professor
+    [ x ] Usuario
+-------------------------------------------------------------------------------------------------
+
+--------------------------------------- Geral ---------------------------------------------------
+[   ] Adaptação MVC as tabelas faltantes (consulte diagrama em "/Banco de dados/centro_diagrama.jpeg"):
+    [   ] Curso
+    [   ] Turma
+    [   ] Avaliação
+    [   ] Mural
+    [   ] Postagem
+    [   ] Inscrição
+    [   ] Matrícula
+
+-------------------------------------------------------------------------------------------------

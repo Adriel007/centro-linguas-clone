@@ -22,6 +22,7 @@ module.exports = (sequelize, Sequelize) => {
     },
     {
       tableName: "tb_nota",
+      timestamps: false, // Desativar os timestamps (testar)
     }
   );
 
