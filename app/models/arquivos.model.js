@@ -22,7 +22,7 @@ module.exports = (sequilize, DataTypes) => {
       allowNull: false,
       references: {
         model: "tb_usuario",
-        key: "id",
+        key: "id_usuario",
       },
     },
   });
