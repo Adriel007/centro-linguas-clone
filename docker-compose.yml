@@ -1,0 +1,46 @@
+
+services:
+  db:
+    image: postgres:15-alpine
+    container_name: centro_linguas_db
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: admin
+      POSTGRES_DB: dbcentrolinguas
+    volumes:
+      - ./Banco de dados:/docker-entrypoint-initdb.d
+      - pg_data:/var/lib/postgresql/data
+    networks:
+      - centro_linguas_net
+    tty: true  # Habilita TTY para o container do PostgreSQL
+    ports:
+      - "5432:5432"
+
+  app:
+    build: .
+    container_name: centro_linguas_app
+    depends_on:
+      - db
+    environment:
+      - HOST=db
+      - PORT=3333
+      - DB_PORT=5432
+      - DB_USER=postgres
+      - DB_PASSWORD=admin
+      - DB=dbcentrolinguas
+    volumes:
+      - .:/usr/src/app
+      - /usr/src/app/node_modules
+    networks:
+      - centro_linguas_net
+    tty: true  # Habilita TTY para o container do Node
+    stdin_open: true  # Mantém STDIN aberto mesmo sem conexão
+    ports:
+      - "3333:3333"
+
+networks:
+  centro_linguas_net:
+    driver: bridge
+
+volumes:
+  pg_data:
