@@ -1,3 +1,4 @@
 bootstrap
 bootstrap icons
 google fonts
+vanillajs-datepicker

@@ -74,7 +74,9 @@ a{
 .bgazul2{
     background-color: var(--azul2);
 }
-
+.bgverde1{
+    background-color: var(--verde1);
+}
 .transicao-cinza{
     color: var(--branco2);
     transition: all var(--transicao-curta) ease-in-out;
@@ -185,6 +187,9 @@ a.stretched-link{
 }
 .grupo-card .card{
     height: 100px !important;
+}
+.grupo-card .card.notas{
+    height: 200px !important;
 }
 .grupo-card .card:hover{
     background-color: var(--vermelho1);
