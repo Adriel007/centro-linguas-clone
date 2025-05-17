@@ -14,17 +14,33 @@ const corsOptions = {
 };
 app.use(cors(corsOptions));
 
-// Configuração CSP
+// CSP para ambiente de testes locais (permite tudo — inseguro, mas útil para dev)
 const cspOptions = {
   policies: {
-    "default-src": [SELF], // Permite recursos da mesma origem
-    "connect-src": [SELF, "http://localhost:3333"], // Permite conexões a localhost
-    "script-src": [SELF],
-    "style-src": [SELF],
-    "img-src": [SELF, "data:"], // Permite imagens inline (opcional)
-    "font-src": [SELF],
+    "default-src": ["*"],
+    "script-src": ["*"],
+    "style-src": ["*"],
+    "img-src": ["*", "data:"],
+    "font-src": ["*"],
+    "connect-src": ["*"],
   },
 };
+
+/*
+// CSP para produção (seguro e restritivo)
+const cspOptions = {
+  policies: {
+    "default-src": [SELF],
+    "script-src": [SELF],
+    "style-src": [SELF, "https://fonts.googleapis.com"],
+    "img-src": [SELF, "data:"],
+    "font-src": [SELF, "https://fonts.gstatic.com"],
+    "connect-src": [SELF, "https://api.seusite.com"], // Altere conforme seu domínio de API
+    "object-src": [NONE],
+    "frame-ancestors": [SELF],
+  },
+};
+*/
 
 // Expor a pasta uploads
 app.use("/uploads", express.static("uploads"));
