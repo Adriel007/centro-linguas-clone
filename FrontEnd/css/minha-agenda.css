@@ -1,0 +1,57 @@
+#calendar-container .datepicker {
+    font-family: Arial, Helvetica, sans-serif;    
+}
+
+.accordion-item{
+    border: 0;
+}
+.accordion-button:focus{
+    box-shadow: none !important;
+}
+
+.accordion-header{
+    border: 0;
+    border-bottom: 2px solid var(--vermelho1);
+}
+.accordion-body{
+    padding: 0;
+}
+
+.tarefa{
+    border-bottom: 1px solid var(--azul1);
+    margin-top: 16px;
+}
+
+.tarefa *{
+    color: var(--cinza2);
+}
+.tarefa a{
+    text-decoration: none;
+}
+.tarefa a *{
+    margin: 0;
+    padding: 0;
+}
+
+
+
+#table-calendario{
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+#table-calendario th, #table-calendario td{
+    /* width: 100px;
+    box-sizing: border-box; */
+}
+
+th{
+    text-align: center;
+    width: 100px;
+    min-width: none;
+}
+
+td {
+    width: 75px;
+    text-align: center;
+    border: 1px solid black;
+}
